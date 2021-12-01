@@ -1,0 +1,445 @@
+:root {
+    --black: #303030;
+    --blue: #274E7B;
+    --white-d: #F2F4F3;
+    --white: #fff;
+}
+
+footer {
+    height: 150px;
+    background: black;
+    display: flex;
+    font-family: 'Oswald';
+}
+.op-footer-logo{
+    color: white;
+    font-size: 60px;
+    margin: auto;
+    letter-spacing: -2px;
+}
+.foto{
+    background-image: url(../img/3.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.op-navbar {
+    position: relative;
+}
+
+.op-ul {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.op-logo{
+    color: white;
+
+}
+
+.nav-link{
+    color: white;
+    justify-content:right;
+
+}
+
+.nosotros{
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: 'Oswald';
+}
+
+.imagen{
+    width: 100%;
+    border-radius: 3px;
+}
+.imagen2{
+    width: 100%;
+}
+
+.barrita {
+    background:#274E7B;
+    width: 100%;
+    height: 5px;
+}
+.h21{
+    text-align: left;
+    font-family: 'Oswald';
+}
+.h22{
+    text-align: right;
+    font-family: 'Oswald';
+}
+
+
+.texto1{
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.texto2{
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.texto{
+    margin-right: 710px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+}
+.input1, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.container-contacto{
+    background-color: var(--black);
+}
+.h2c{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Oswald';
+}
+.label-cont{
+    color: white;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+textarea{
+    min-height: 150px;
+    max-height: 200px;
+}
+
+.boton{
+width: 222px;
+margin-bottom: 40px;
+}
+
+.texto-foto{
+    color: white;
+    font-size: 50px;
+    margin-right: 900px;
+    background-color: brown;
+}
+
+.nav-item{
+    
+    text-align: right;
+    display: inline-block;
+}
+
+.op-titulo{
+    height: 90vh;
+}
+
+.op-titulo-texto{
+    text-align: left;
+    color: white;
+}
+
+.op-foto-titulo{
+    font-size: 60px;
+    font-family: 'Oswald';
+    font-weight: 600;
+}
+
+.op-titulo-row{
+    height: 100%;
+}
+
+.op-btn-agregar{
+    height: 50px;
+    font-family: 'Oswald';
+    font-size: 25px;
+    color: black;
+    background: white;
+    border:none;
+    width: 45%;
+    border-radius: 5PX;
+}
+
+.dark-nav{
+    background: #000;
+}
+
+.main-hour{
+    height: 90vh;
+    max-height: 90vh;
+}
+
+.row-calendar{
+    height: auto;
+}
+
+.calendar{
+    height: auto;
+}
+
+.calendar form{
+    padding: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+}
+.calendar-month{
+    background: #000;
+    color: #F2F4F3;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-days{
+    border: 1px solid black;
+}
+
+.month-name{
+    display: inline-block;
+    font-family: 'Oswald';
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.toggle-left,
+.toggle-right{
+    display: inline-block;
+    text-decoration: none;
+    color: #F2F4F3;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.h2-hora{
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Oswald';
+}
+
+.calendar-days-name{
+    background: #303030;
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.calendar-days-day{
+    background:#F2F4F3;
+    border: 1px solid #303030;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    padding: 0px;
+}
+
+ol li input[type="radio"]:checked + label {
+    color:#F2F4F3;
+    background: #303030;
+}
+
+ol li label{
+    color: #303030;
+    font-family: 'Oswald';
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+ol li label:hover{
+    color: #F2F4F3;
+    background:#303030;
+}
+
+.day1 {
+    grid-column-start: 3;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.col-4 select{
+    width: 100%;
+    border-radius: 0;
+    font-family: 'Oswald';
+    font-size: 18px;
+}
+
+.col-4 select option{
+    border-radius:0px;
+}
+
+.col-6 .submit-hora{
+    color: white;
+    background:#274E7B;
+    padding: 5px 30px;
+    font-family: 'Oswald';
+    border: none;
+    border-radius: 5px;
+}
+
+.label-hora{
+    color: #000;
+    font-family: 'Oswald';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login-bg{
+    background:#303030;
+}
+
+.login-container{
+    background:#F2F4F3;
+    height: 90vh;
+    margin-top: 5vh;
+    border-radius: 5px;
+}
+
+.login-container form{
+    height: 75%;
+}
+
+.form-header{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Oswald';
+}
+
+.form-header h1{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-header h2{
+    display: inline-block;
+    text-align: center;
+    color: #303030;
+}
+
+.field-cont{
+    width: 100%;
+}
+
+.field-cont label{
+    display: inline-block;
+    width: 100%;
+    color: #303030;
+}
+
+.field-cont input[type="text"],
+.field-cont input[type="password"],
+.field-cont input[type="email"]{
+    background: white;
+    border: 1px solid #9c9c9c;
+    width: 100%;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.field-cont ul,
+.field-cont small{
+    display: none;
+}
+
+.field-cont input[type="text"]:focus,
+.field-cont input[type="password"]:focus,
+.field-cont input[type="email"]:focus{
+    outline: none;
+    border: 1px solid black;
+}
+
+.text-cont{
+    width: 100%;
+}
+
+.form-text{
+    color: #303030;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.text-link{
+    font-family: 'Oswald';
+    text-decoration: none;
+    text-align: center;
+    color: #274E7B;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.go-back{
+    color: #274E7B;
+    background: none;
+    font-family: 'Oswald';
+    text-decoration: none;
+    width: 40%;
+    text-align: center;
+}
+
+.go-back:hover{
+    color: white;
+    background:var(--blue);
+    font-family: 'Oswald';
+    text-decoration: none;
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn-submit-op{
+    color: white;
+    background:#274E7B;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: 'Oswald';
+    width: 40%;
+}
+
+.crud-body{
+    background:#F2F4F3;
+}
+
+
+.crud-form{
+    height: 80vh;
+    background: white ;
+}
+
+.crud-form form{
+    height: 100%;
+}
+
+

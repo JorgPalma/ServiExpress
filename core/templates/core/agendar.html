@@ -1,0 +1,89 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9bc017105e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Serviexpress | Agendar</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg dark-nav">
+            <div class="container">               
+                <a href="#" class="navbar-brand op-logo">ServiExpress</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menú de navegación">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars op-vanbar-toggler-icon"></i></span>
+                </button>
+                <div class="collapse navbar-collapse op-navbar dark-nav" id="navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0 op-ul">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}" class="nav-link ml-lg-2 active">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contacto</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a href="{% url 'agendar' %}" class="nav-link">Agendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">{{user.username}}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'logout' %}" class="nav-link"><i class="fas fa-door-closed"></i></a>
+                            </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}" class="nav-link"><i class="fa fa-user-circle-o"></i></a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container main-hour">
+        <div class="row d-flex justify-content-center row-calendar">
+            <h2 class="h2-hora">Agendar hora</h2>
+            <div class="col-6">
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    {{ form | crispy }}
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="mt-3 submit-hora">Agendar</button>
+                    </div>
+                </form>
+                {{alerta}}
+            </div>
+        </div>
+    </main>
+<footer>
+    <h2 class="op-footer-logo">ServiExpress</h2>
+</footer>
+
+    <!--Bootstraps-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!--Validación-->
+    <script src="app.js"></script>
+
+</body>
+</html>
